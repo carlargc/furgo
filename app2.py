@@ -1,3 +1,7 @@
+
+
+
+
 import os
 
 from flask import  Flask, render_template, request, redirect, url_for, jsonify, session
@@ -14,6 +18,9 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 app = Flask(__name__)
 
 
+@app.route("/")
+def home():
+    return "¡Bienvenido a FurgoFinder!"
 
 
 
