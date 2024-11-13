@@ -540,6 +540,7 @@ def registrar_apoderado():
             direccion=data['direccion'],
             sexo=data.get('sexo'),
             numero_telefono=data['numero_telefono'],
+            rol="ROLE_APODERADO",  # Rol fijo
             password=generate_password_hash(data['password'])  # Encripta la contraseña
         )
         db.session.add(nuevo_apoderado)
